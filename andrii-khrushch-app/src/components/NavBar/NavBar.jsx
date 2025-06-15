@@ -35,7 +35,7 @@ const NavBar = () => {
         
         
     
-    <button className={styles.burgerButton} onClick={() => isOpen? setIsOpen(false) : setIsOpen(true)} />
+    <button className={styles.burgerButton} onClick={() => setIsOpen(!isOpen)} />
       
       
         <div className={`${styles.burgerOffScreen} ${isOpen? styles.open : ''}`}>
