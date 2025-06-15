@@ -5,7 +5,7 @@ function Blog() {
     return (
         <>
 
-        <NavBar />
+        
 
         <div>
             Welcome to the Blog Page

@@ -2,8 +2,9 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { languages } from "../../localizations/languages";
 import styles from "./LanguageSwitch.module.css";
+import clsx from "clsx";
 
-const LanguageSwitch = () => {
+const LanguageSwitch = ({className}) => {
 
 
     const i18n = useTranslation();
@@ -23,7 +24,7 @@ const LanguageSwitch = () => {
     return(
 
         <>
-        <button className={styles.switchButton} onClick={handleLanguageChange}>{i18n.i18n.language}</button>
+        <button className={clsx(styles.switchButton, className)} onClick={handleLanguageChange}>{i18n.i18n.language}</button>
         </>
     )
 }

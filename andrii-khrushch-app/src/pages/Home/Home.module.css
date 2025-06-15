@@ -1,0 +1,48 @@
+.pageContainer{
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+}
+
+.sectionHero{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10vh;
+}
+
+.title{
+    display: flex;
+    font-size: large;
+    flex-direction: column;
+    font-family: monospace;
+    text-align: center;
+}
+
+.titleChildrenMargin{
+    margin: 1vh;
+}
+
+.faq{
+    justify-items: flex-start;
+    margin-left: 14vw;
+}
+
+.paragraph{
+    max-width: 40%;
+}
+
+@media(max-width: 768px){
+
+    .faq{
+        justify-items: center;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .paragraph{
+        max-width: 70%;
+    }
+}
+

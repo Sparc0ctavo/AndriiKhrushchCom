@@ -5,7 +5,6 @@ const Profile = () => {
     return (
         <>
 
-        <NavBar />
 
         <div>
             Welcome to the Profile Page

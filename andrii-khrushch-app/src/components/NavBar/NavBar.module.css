@@ -1,35 +1,89 @@
 nav{
     display: flex;
     font-family: monospace;
-    background: black;
-    width: 100vw;
-    justify-content: center;
+    
+    background: transparent;
+    width: 100%;
     color: aliceblue;
-    height: 72px;
+    height: 100%;
     
 }
 
 ul{
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     width: 100%;
     padding: 0;
     align-items: center;
 }
 
-.LinkCustom{
+.LinkMenu{
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 22px;
+    margin-left: 9vw;
 }
 
-@media(max-width: 414px){
-    nav{
+.linkBurger{
+    text-align: left;
+    font-size: 22px;
+    text-decoration: none;
+    color: black;
+
+}
+
+.burgerButton{
+    display: none;
+    height: 50%;
+    aspect-ratio: 1 / 1;
+    background: rgb(255, 0, 0);
+    color:black;
+    margin-left: 5vw;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+
+
+.burgerOffScreen{
+
+    
+    background: rgb(255, 255, 255);
+    height: 100vh;
+    width: 45vw;
+    transform: translateX(-100%);
+    top: 0;
+    position : fixed;
+    z-index: 900;
+    transition: transform 0.5s ease;
+
+}
+
+.burgerOffScreen.open{
+    transform: translateX(0);
+}
+
+.burgerOffScreenContainer{
     display: flex;
-    background: black;
-    justify-content: flex-start;
-    color: aliceblue;
-    height: 72px;
-    width: 414px;
+    margin-left: 5vw;
+    margin-top: 10vh;
+    flex-direction: column;
+    font-size: 3rem;
+}
+
+
+@media(max-width: 425px){
+    nav{
+    display: none;
+    }
+
+    .burgerButton{
+        display: flex;
+    }
+}
+
+@media(min-width: 426px){
+    .burgerOffScreen{
+        display: none;
     }
 }
